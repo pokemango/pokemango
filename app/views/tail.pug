@@ -1,0 +1,18 @@
+extends ./layout.pug
+
+block title
+  title Pokemango | Tail
+
+block content
+  .container
+    #output(style="font-family:monospace;")
+  script(src="/socket.io/socket.io.js")
+  script(type='text/javascript').
+    var output = document.getElementById('output');
+    var socket = io.connect('http://localhost:3000');
+    socket.on('tail', function (data) {
+      var div = document.createElement('div')
+      div.textContent = data.data
+      output.appendChild(div);
+      document.body.scrollTop = output.scrollHeight;
+    });

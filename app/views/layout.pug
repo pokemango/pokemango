@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    block title
+      title Pokemango
+    link(rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32")
+    link(rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16")
+    link(rel="manifest" href="/favicons/manifest.json")
+    link(rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#f6d307")
+    link(rel="shortcut icon" href="/favicons/favicon.ico")
+    meta(name="apple-mobile-web-app-title" content="Pokemango")
+    meta(name="application-name" content="Pokemango")
+    meta(name="msapplication-config" content="/favicons/browserconfig.xml")
+    meta(name="theme-color" content="#ffffff")
+    link(rel="stylesheet" type="text/css" href="vendor/bootstrap-lumen.min.css")
+  body(style="padding-top: 70px;")
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header" style="width: 100%;">
+          <span class="navbar-brand">
+            <img style="height: 1em;" src="images/pokemango-logo.png" />
+          </span>
+          <button id="update" style="margin-top: 5px;" class="pull-right btn btn-primary">Update</button>
+        </div>
+      </div><!--/.container-fluid -->
+    </nav>
+    block content
